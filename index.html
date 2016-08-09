@@ -3,10 +3,25 @@
 <body>
 
 <h1>Lista zadań do wykonania:</h1>
+<h2>sed/awk/grep</h2>
 <ol>
-    <li><label><input type="checkbox"> zadanie jeden</label></li>
-    <li><label><input type="checkbox"> zadanie jeden</label></li>
-    <li><label><input type="checkbox"> zadanie jeden</label></li>
+    <li><label><input type="checkbox">Dany jest plik o zawartości: "abc:defg" - przepuścić go przez skrypt który wyświetli "defg:abc" - osobno za pomocą AWK, osobno SED</label></li>
+    <li><label><input type="checkbox">Dany jest plik CSV składający się z 3 kolumn liczb. Wyświetlić, za pomocą awka, sumę liczby 2 i 3 z każdego wiersza jeśli kolumna 1 ma wartość 0</label></li>
+    <li><label><input type="checkbox">Pobrać dowolny log (stdout) z uruchomienia XTRF. Za pomocą awk/sed/grep (dowolna kombinacja, najlepiej na 2 sposoby) wyświetlić czas startu systemu w sekundach (+-1s)</label></li>
+    <li><label><input type="checkbox">Dany jest dowolny log stdout z XTRF. Za pomocą grepa (choć niekoniecznie) wyświetlić całą tabelkę z wersjami owrapowaną w słowa "XTRF SYSTEM BUILD DATA"</label></li>
 </ol>
+Przykład do 2:
+<pre>
+    1,2,3
+    3,4,5
+    0,1,2
+    0,0,7
+</pre>
+
+oczekiwany wynik:
+<pre>
+    3
+    7
+</pre>
 </body>
 </html>
